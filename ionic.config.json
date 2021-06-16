@@ -1,0 +1,8 @@
+{
+  "name": "Popcornando",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "660fb0f7"
+}
