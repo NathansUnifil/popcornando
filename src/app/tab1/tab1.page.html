@@ -13,7 +13,7 @@
     
     </ion-col>
     <ion-col>
-      <ion-searchbar animated color="danger" value="Ionic">
+      <ion-searchbar animated color="danger">
       
       </ion-searchbar>
     </ion-col> 
@@ -23,16 +23,22 @@
   </ion-row>
   <ion-row class="ion-align-items-center">
    <ion-col>
-    <ion-button color="primary" expand="full"><ion-icon name="balloon-outline"></ion-icon>
-    Inicio</ion-button>
+    <ion-button color="primary" onclick="window.location.href='http://localhost:8100/tabs/tab1'">
+      <ion-icon name="balloon-outline"></ion-icon>
+    Inicio
+  </ion-button>
     </ion-col>
     <ion-col>
     <ion-card>
-        <img src="C:\Users\Usuario\popcornando\src\app\tab1"/>
-        <ion-card-header>
-          <ion-card-title>Ofertas</ion-card-title>
+        <img src="./src\app\tab1\Ofertas.png">
+        <ion-card-header button="true" 
+        onclick="window.location.href='http://localhost:8100/ofertas'">
+          <ion-card-title>
+            Ofertas
+          </ion-card-title>
         </ion-card-header>
-        <ion-card-content>
+        <ion-card-content button="true" 
+        onclick="window.location.href='http://localhost:8100/ofertas'">
           Novas ofertas novinhas do mercado!
         </ion-card-content>
       </ion-card>
@@ -40,9 +46,13 @@
     <ion-col>
     <ion-card>
         <ion-card-header>
-          <ion-card-title>Recomendações</ion-card-title>
+          <ion-card-title button="true" 
+          onclick="window.location.href='http://localhost:8100/recomendacoes'">
+            Recomendações
+          </ion-card-title>
         </ion-card-header>
-        <ion-card-content>
+        <ion-card-content button="true" 
+        onclick="window.location.href='http://localhost:8100/recomendacoes'">
           As recomendações escolhidas apenas para você!
         </ion-card-content>
       </ion-card>
@@ -58,9 +68,13 @@
     <ion-col>
     <ion-card>
         <ion-card-header>
-          <ion-card-title>Especificações</ion-card-title>
+          <ion-card-title button="true" 
+          onclick="window.location.href='http://localhost:8100/especificacoes'">
+          Especificações
+        </ion-card-title>
         </ion-card-header>
-        <ion-card-content>
+        <ion-card-content button="true" 
+          onclick="window.location.href='http://localhost:8100/especificacoes'">
           Tem algo que você quer ir em detalhes? Clica Aqui!
         </ion-card-content>
       </ion-card>
