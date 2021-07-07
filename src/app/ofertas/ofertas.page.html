@@ -7,11 +7,23 @@
 <ion-content>
 <ion-row class="ion-align-items-center">
     <ion-col>
-     <ion-button color="primary" expand="full" onclick="window.location.href='http://localhost:8100/tabs/tab1'">
-       <ion-icon name="balloon-outline"></ion-icon>
-     Inicio
-   </ion-button>
+      <ion-fab vertical="top" horizontal="start">
+    <ion-fab-button>
+      <ion-icon name="arrow-up-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list>
+    <ion-button color="primary" onclick="window.location.href='http://localhost:8100/tabs/tab1'">
+      <ion-icon name="balloon-outline"></ion-icon>
+    Inicio
+  </ion-button>
+    </ion-fab-list>
+  </ion-fab>
      </ion-col>
+     <ion-col>
+     </ion-col>
+     <ion-col>
+     </ion-col>
+      <H1>Aqui estão as ofertas mais quentes do mercado regional!</H1>
      <ion-col>
      </ion-col>
      <ion-col>
@@ -20,9 +32,53 @@
      </ion-col>
      <ion-col>
      </ion-col>
-     <ion-col>
-     </ion-col>
-     <ion-col>
-     </ion-col>
+   </ion-row>
+   <ion-row class="ion-align-items-center">
+    <ion-col>
+       <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Item 1</ion-card-subtitle>
+          <ion-card-title>Nome 1</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Preço total 1 (pegar na database criada)
+        </ion-card-content>
+        </ion-card>
+    </ion-col>
+    <ion-col>
+       <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Item 2</ion-card-subtitle>
+          <ion-card-title>Nome 2</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Preço total 2 
+        </ion-card-content>
+        </ion-card>
+    </ion-col>
+   </ion-row>
+    <ion-row class="ion-align-items-center">
+    <ion-col>
+       <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Item 3</ion-card-subtitle>
+          <ion-card-title>Nome 3</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Preço total 3
+        </ion-card-content>
+        </ion-card>
+    </ion-col>
+    <ion-col>
+       <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Item 4</ion-card-subtitle>
+          <ion-card-title>Nome 4</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Preço total 4
+        </ion-card-content>
+        </ion-card>
+    </ion-col>
    </ion-row>
 </ion-content>
