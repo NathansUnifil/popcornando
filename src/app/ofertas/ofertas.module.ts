@@ -8,12 +8,15 @@ import { OfertasPageRoutingModule } from './ofertas-routing.module';
 
 import { OfertasPage } from './ofertas.page';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    OfertasPageRoutingModule
+    OfertasPageRoutingModule,
+    HttpClientModule
   ],
   declarations: [OfertasPage]
 })
