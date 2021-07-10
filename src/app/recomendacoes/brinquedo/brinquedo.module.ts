@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RecomendacoesPageRoutingModule } from './recomendacoes-routing.module';
+import { BrinquedoPageRoutingModule } from './brinquedo-routing.module';
 
-import { RecomendacoesPage } from './recomendacoes.page';
+import { BrinquedoPage } from './brinquedo.page';
+
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -15,8 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     IonicModule,
     HttpClientModule,
-    RecomendacoesPageRoutingModule
+    BrinquedoPageRoutingModule
   ],
-  declarations: [RecomendacoesPage]
+  declarations: [BrinquedoPage]
 })
-export class RecomendacoesPageModule {}
+export class BrinquedoPageModule {}

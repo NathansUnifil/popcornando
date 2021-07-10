@@ -6,14 +6,14 @@ CREATE TABLE porcornando.ofertas (
   `TipoAnun` int(11) DEFAULT NULL,
   `PreAnun` double DEFAULT null,
   primary key (NumAnun)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Essa é a Tabela para a pagina Ofertas em app/Ofertas'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Essa ï¿½ a Tabela para a pagina Ofertas em app/Ofertas'
 
 alter table porcornando.ofertas modify column NumAnun bigint(110) not null auto_increment;
 
 
 
 insert into porcornando.ofertas (NomeAnun, TipoAnun, PreAnun) values ('Carro luxuoso!', 1, 999.90),
-														 				('Carro esportivo!', 1, 599.90),
+														 			('Carro esportivo!', 1, 599.90),
 														 			('Carro Barato!', 1, 159.90),
 														 			('Roupas de Casamento!', 2, 1999.90),
 																	('Roupas de Festa!', 2, 1099.90),
@@ -22,7 +22,7 @@ insert into porcornando.ofertas (NomeAnun, TipoAnun, PreAnun) values ('Carro lux
 																	('Computador!', 3, 6999.90),
 																	('Geladeira!', 3, 3999.90),
 																	('Roteador!', 3, 79.90),
-																	('Livro de Mistério!', 4, 82.90),
+																	('Livro de Mistï¿½rio!', 4, 82.90),
 																	('Livro de Romance!', 4, 47.90),
 																	('Livro de Humor!', 4, 35.90),
 																	('Apostilas Escolares!', 4, 52.90),

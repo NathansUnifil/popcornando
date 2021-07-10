@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RecomendacoesPageRoutingModule } from './recomendacoes-routing.module';
+import { LivroPageRoutingModule } from './livro-routing.module';
 
-import { RecomendacoesPage } from './recomendacoes.page';
+import { LivroPage } from './livro.page';
+
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -15,8 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     IonicModule,
     HttpClientModule,
-    RecomendacoesPageRoutingModule
+    LivroPageRoutingModule
   ],
-  declarations: [RecomendacoesPage]
+  declarations: [LivroPage]
 })
-export class RecomendacoesPageModule {}
+export class LivroPageModule {}
