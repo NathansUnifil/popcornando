@@ -8,7 +8,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LivroPage implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+    this.mostrarLista();
+    this.getLista();
+  }
 
   private aquelaLista;
 
@@ -19,13 +22,14 @@ export class LivroPage implements OnInit {
    mostrarLista() { // pegar a database ofertas e os diagrams que queremos colocar
     this.aquelaLista=[];
     this.http.get<any[]>("http://localhost/api/recomendacoes/livrosConsulta.php").subscribe ( dadosLiv => { dadosLiv.forEach( item => {
-      this.aquelaLista([item.TipAnun,item.NomeAnun])
+      this.aquelaLista.push([item.TipAnun,item.NomeAnun])
     })
   })
 
   }
 
   ngOnInit() {
+    this.mostrarLista;
   }
 
 }

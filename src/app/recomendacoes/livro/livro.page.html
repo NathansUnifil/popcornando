@@ -5,23 +5,40 @@
 </ion-header>
 
 <ion-content>
-<ion-row class="ion-align-items-center">
-    <ion-col>
-      <ion-fab vertical="top" horizontal="start">
+  <ion-fab vertical="center" horizontal="start" edge slot="fixed">
     <ion-fab-button>
       <ion-icon name="arrow-up-circle-outline"></ion-icon>
     </ion-fab-button>
-    <ion-fab-list>
+    <ion-fab-list side="top">
     <ion-button color="primary" onclick="window.location.href='http://localhost:8100/tabs/tab1'">
       <ion-icon name="balloon-outline"></ion-icon>
     Inicio
   </ion-button>
+  <ion-button color="primary" onclick="window.location.href='http://localhost:8100/ofertas'">
+    <ion-icon name="diamond-outline"></ion-icon>
+    Ofertas
+  </ion-button>
+  <ion-button color="primary" onclick="window.location.href='http://localhost:8100/recomendacoes'">
+    <ion-icon name="rocket-outline"></ion-icon>
+    Recomendações
+  </ion-button>
+  <ion-button color="primary" onclick="window.location.href='http://localhost:8100/especificacoes'">
+    <ion-icon name="construct-outline"></ion-icon>
+    Especificações
+  </ion-button>
     </ion-fab-list>
   </ion-fab>
-     </ion-col>
-     <ion-col>
-
-     </ion-col>
+<ion-row>
+     <ion-col *ngFor="let item of getLista()">
+       <ion-list>
+        <ion-list-header>
+          Te recomendamos:
+        </ion-list-header>
+        <ion-item color="primary">
+          <ion-label>{{item[1]}}</ion-label>
+        </ion-item>
+       </ion-list>
+    </ion-col>
 </ion-row>
 
 </ion-content>

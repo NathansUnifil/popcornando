@@ -8,7 +8,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BrinquedoPage implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+    this.mostrarLista();
+    this.getLista();
+   }
 
   private delaLista;
 
@@ -19,13 +22,14 @@ export class BrinquedoPage implements OnInit {
    mostrarLista() { // pegar a database ofertas e os diagrams que queremos colocar
     this.delaLista=[];
     this.http.get<any[]>("http://localhost/api/recomendacoes/brinquedosConsulta.php").subscribe ( dadosBrin => { dadosBrin.forEach( item => {
-      this.delaLista([item.TipAnun,item.NomeAnun])
+      this.delaLista.push([item.TipAnun,item.NomeAnun])
     })
   })
 
   }
 
   ngOnInit() {
+    this.mostrarLista;
   }
 
 }
