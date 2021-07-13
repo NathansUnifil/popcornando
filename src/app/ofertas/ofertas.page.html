@@ -33,52 +33,19 @@
      <ion-col>
      </ion-col>
    </ion-row> 
-   <ion-row class="ion-align-items-center" *ngFor="let item of mostrarLista()">
-    <ion-col>
+   <ion-row class="ion-align-items-center" >
+    <ion-col size="3.985" *ngFor="let item of getLista()">
+      <div>
        <ion-card>
         <ion-card-header>
-          <ion-card-subtitle>{{item.NumAnun[1]}}</ion-card-subtitle>
-          <ion-card-title>Nome 1</ion-card-title>
+          <ion-card-subtitle > {{item[0]}} </ion-card-subtitle>
+          <ion-card-title> {{item[1]}} </ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          Preço total 1 (pegar na database criada)
+          {{item[2]}}
         </ion-card-content>
         </ion-card>
-    </ion-col>
-    <ion-col>
-       <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Item 2</ion-card-subtitle>
-          <ion-card-title>Nome 2</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          Preço total 2 
-        </ion-card-content>
-        </ion-card>
-    </ion-col>
-   </ion-row>
-    <ion-row class="ion-align-items-center">
-    <ion-col>
-       <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Item 3</ion-card-subtitle>
-          <ion-card-title>Nome 3</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          Preço total 3
-        </ion-card-content>
-        </ion-card>
-    </ion-col>
-    <ion-col>
-       <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Item 4</ion-card-subtitle>
-          <ion-card-title>Nome 4</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          Preço total 4
-        </ion-card-content>
-        </ion-card>
+        </div>
     </ion-col>
    </ion-row>
 </ion-content>
