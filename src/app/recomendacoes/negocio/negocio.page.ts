@@ -19,7 +19,7 @@ export class NegocioPage implements OnInit {
     return this.nossaLista;
   }
 
-  mostrarLista() { // pegar a database ofertas e os diagrams que queremos colocar
+  mostrarLista() { // pegar a database recomedações e os diagramas especificos que queremos colocar 
     this.nossaLista=[];
     this.http.get<any[]>("http://localhost/api/recomendacoes/negocioConsulta.php").subscribe ( dadosNeg => { dadosNeg.forEach( item => {
       this.nossaLista.push([item.TipAnun,item.NomeAnun])

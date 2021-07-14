@@ -19,7 +19,7 @@ export class BrinquedoPage implements OnInit {
     return this.delaLista;
   }
 
-   mostrarLista() { // pegar a database ofertas e os diagrams que queremos colocar
+   mostrarLista() { // pegar a database recomedações e os diagramas especificos que queremos colocar
     this.delaLista=[];
     this.http.get<any[]>("http://localhost/api/recomendacoes/brinquedosConsulta.php").subscribe ( dadosBrin => { dadosBrin.forEach( item => {
       this.delaLista.push([item.TipAnun,item.NomeAnun])

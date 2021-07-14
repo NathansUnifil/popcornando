@@ -2,7 +2,7 @@
 
     $conexaoLiv = new PDO("mysql:host=localhost;dbname=porcornando","root","");
 
-    $obj = $conexaoLiv->query("select * from recomendacoes where TipAnun=2");
+    $obj = $conexaoLiv->query("select * from recomendacoes where TipAnun=1");
 
     $dadosLiv = $obj->fetchAll(PDO::FETCH_ASSOC);
 

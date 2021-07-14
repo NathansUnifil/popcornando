@@ -2,7 +2,7 @@
 
     $conexaoNeg = new PDO("mysql:host=localhost;dbname=porcornando","root","");
 
-    $obj = $conexaoNeg->query("select * from recomendacoes where TipAnun=3");
+    $obj = $conexaoNeg->query("select * from recomendacoes where TipAnun=2");
 
     $dadosNeg = $obj->fetchAll(PDO::FETCH_ASSOC);
 

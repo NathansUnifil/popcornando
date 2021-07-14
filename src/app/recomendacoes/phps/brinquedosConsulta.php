@@ -2,7 +2,7 @@
 
     $conexaoBrin = new PDO("mysql:host=localhost;dbname=porcornando","root","");
 
-    $obj = $conexaoBrin->query("select * from recomendacoes where TipAnun=1");
+    $obj = $conexaoBrin->query("select * from recomendacoes where TipAnun=3");
 
     $dadosBrin = $obj->fetchAll(PDO::FETCH_ASSOC);
 

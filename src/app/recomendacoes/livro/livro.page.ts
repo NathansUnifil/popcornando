@@ -19,7 +19,7 @@ export class LivroPage implements OnInit {
     return this.aquelaLista;
   }
 
-   mostrarLista() { // pegar a database ofertas e os diagrams que queremos colocar
+   mostrarLista() { // pegar a database recomedações e os diagramas especificos que queremos colocar 
     this.aquelaLista=[];
     this.http.get<any[]>("http://localhost/api/recomendacoes/livrosConsulta.php").subscribe ( dadosLiv => { dadosLiv.forEach( item => {
       this.aquelaLista.push([item.TipAnun,item.NomeAnun])
