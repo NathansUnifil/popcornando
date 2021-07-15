@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Storage } from '@ionic/storage-angular';
-import { ServicosService } from './servicos.service';
 
 @Component({
   selector: 'app-especificacoes',
@@ -10,38 +8,38 @@ import { ServicosService } from './servicos.service';
 })
 export class EspecificacoesPage implements OnInit {
 
-  ServicosService:ServicosService
+  private aLista;
+  private categoria = "";
+  private marca = "";
+  private anunciante = "";
 
- constructor(private http:HttpClient, private storage: Storage) {
+ constructor(private http:HttpClient) {
     this.pegarLista(); 
     this.getLista();
-    this.ServicosService = new ServicosService(storage);
+    this.add();
    }
 
-  public getLista() {
-   this.ServicosService.pegaLista; 
-  }
-
   pegarLista() { // pegar a database para adicionar as variaveis das colunas
-    this.ServicosService.aLista=[];
+    this.aLista=[];
     this.http.get<any[]>("http://localhost/api/especificacoes/consultaEsp.php").subscribe 
     ( dados => { dados.forEach( item => {
-      this.ServicosService.aLista.push([item.categoria, item.marca, item.anunciante])
+      this.aLista.push([item.categoria, item.marca, item.anunciante])
       console.log(item.categoria, item.marca, item.anunciante) 
-    })
+    });
   })
+  }
+   
+  getLista() {
+    return this.aLista;
   }
   
   ngOnInit() {
     this.pegarLista;
   }
 
-   atualizarListaAtual() {
-    this.ServicosService.atualizarListaAtual;
-   }
-
-    add(add) {
-      this.ServicosService.add(add)
-    }
+   add() {
+    this.http.get<any[]>("http://localhost/api/especificacoes/consultaEsp.php?cat" + this.categoria + "&marca=" + this.marca + "&anun=" + this.anunciante)
+    .subscribe();   
+}
 }
 
