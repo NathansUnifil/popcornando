@@ -12,7 +12,7 @@
     <ion-fab-list side="start">
     <ion-button color="primary" onclick="window.location.href='http://localhost:8100/tabs/tab1'">
       <ion-icon name="balloon-outline"></ion-icon>
-    Inicio
+    Início
   </ion-button>
   <ion-button color="primary" onclick="window.location.href='http://localhost:8100/ofertas'">
     <ion-icon name="diamond-outline"></ion-icon>
@@ -35,7 +35,7 @@
     <ion-label position="floating">
         Categoria:
     </ion-label>
-    <ion-input inputmode="text" >
+    <ion-input [(ngModel)]="categoria" inputmode="text">
 
       </ion-input>
   </ion-item>
@@ -43,7 +43,7 @@
     <ion-label position="floating">
       Marca:
     </ion-label>
-    <ion-input inputmode="text">
+    <ion-input [(ngModel)]="marca" inputmode="text">
 
       </ion-input>
   </ion-item>
@@ -51,12 +51,12 @@
     <ion-label position="floating">
       Anunciante:
     </ion-label>
-    <ion-input inputmode="text">
+    <ion-input [(ngModel)]="anunciante" inputmode="text">
 
       </ion-input>
   </ion-item>
   <ion-button (click)="add()">
-
+    MARCAR
   </ion-button>
 </ion-list>
     </ion-col>

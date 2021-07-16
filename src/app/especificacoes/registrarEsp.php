@@ -8,7 +8,7 @@ $cat = $_GET["cat"];
 $marca = $_GET["marca"];
 $anun = $_GET["anun"];
 
-$obj -> execute([$cat, $marca, $anun]);
+$obj ->execute([$cat, $marca, $anun]);
 
 
 header("Content-Type: application/json");

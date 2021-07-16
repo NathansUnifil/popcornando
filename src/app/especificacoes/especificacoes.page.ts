@@ -9,14 +9,13 @@ import { HttpClient } from '@angular/common/http';
 export class EspecificacoesPage implements OnInit {
 
   private aLista;
-  private categoria = "";
-  private marca = "";
-  private anunciante = "";
+  categoria = "";
+  marca = "";
+  anunciante = "";
 
  constructor(private http:HttpClient) {
     this.pegarLista(); 
     this.getLista();
-    this.add();
    }
 
   pegarLista() { // pegar a database para adicionar as variaveis das colunas
@@ -24,7 +23,7 @@ export class EspecificacoesPage implements OnInit {
     this.http.get<any[]>("http://localhost/api/especificacoes/consultaEsp.php").subscribe 
     ( dados => { dados.forEach( item => {
       this.aLista.push([item.categoria, item.marca, item.anunciante])
-      console.log(item.categoria, item.marca, item.anunciante) 
+       console.log(item.categoria, item.marca, item.anunciante)
     });
   })
   }
@@ -38,8 +37,8 @@ export class EspecificacoesPage implements OnInit {
   }
 
    add() {
-    this.http.get<any[]>("http://localhost/api/especificacoes/consultaEsp.php?cat" + this.categoria + "&marca=" + this.marca + "&anun=" + this.anunciante)
+    this.http.get<any[]>("http://localhost/api/especificacoes/registrarEsp.php?cat=" + this.categoria + "&marca=" + this.marca + "&anun=" + this.anunciante)
     .subscribe();   
-}
+  }
 }
 

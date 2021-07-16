@@ -2,7 +2,7 @@
 
     $conexaoOf = new PDO("mysql:host=localhost;dbname=porcornando","root","");
 
-    $obj = $conexaoOf->query("select * from ofertas");
+    $obj = $conexaoOf->query("select NumAnun, NomeAnun, PreAnun from ofertas");
 
     $dados = $obj->fetchAll(PDO::FETCH_ASSOC);
 

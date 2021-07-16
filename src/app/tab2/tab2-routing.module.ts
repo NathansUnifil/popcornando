@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+  },  {
+    path: 'infopessoal',
+    loadChildren: () => import('./infopessoal/infopessoal.module').then( m => m.InfopessoalPageModule)
   }
+
 ];
 
 @NgModule({
